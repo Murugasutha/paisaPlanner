@@ -23,6 +23,12 @@ Each tool lives on its own page and is connected via a clean and minimal **navig
 
 ---
 
+## 🚀 Live Demo
+
+🔗 [View the Live Project](https://github.com/Murugasutha/paisaPlanner)
+
+---
+
 ## 🙌 Inspiration
 
 This project was built as a learning milestone in **NeoG Camp**. It's a reminder that even small, simple tools can solve real-life problems. Try making something useful — and have fun doing it! 💪
