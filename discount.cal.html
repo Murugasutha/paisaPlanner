@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Discount Deducer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="/index.html">Paise Planner</a></li>
+          <li><a href="convertor.html">Kurrency Konverter</a></li>
+          <li><a href="discount.cal.html">Discount Deducer</a></li>
+          <li><a href="bill-batwara.html">Bill Batwara</a></li>
+        </ul>
+      </nav>
+      <hgroup>
+        <h1>₹Discount Deducer</h1>
+        <p>Lets see how much you saved</p>
+      </hgroup>
+    </header>
+    <main class="container">
+      <section>
+        <p>
+          Enter the total amount and discount percentage to see the final price
+          and the amount saved!
+        </p>
+        <div class="grid">
+          <input
+            type="number"
+            placeholder="Enter Total amount"
+            id="total"
+            required
+          />
+          <input
+            type="number"
+            placeholder="Enter discount percentage"
+            id="discount"
+            required
+          />
+          <button type="button" id="calculateBtn">Calculate Discount</button>
+        </div>
+      </section>
+      <section>
+        <p id="result"></p>
+      </section>
+    </main>
+    <footer class="container neog-footer">
+      <small>
+        go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+
+    <script>
+      function calculateDiscount(total, discountPercent) {
+        discountAmount = (total * discountPercent) / 100;
+        totalAmount = total - discountAmount;
+        return {
+          discountAmount: discountAmount.toFixed(2),
+          totalAmount: totalAmount.toFixed(2),
+        };
+      }
+      function handleButtonClick() {
+        const totalElement = document.getElementById("total");
+        const discountPercentElement = document.getElementById("discount");
+        const result = document.getElementById("result");
+
+        const total = totalElement.value;
+        const discountPercent = discountPercentElement.value;
+
+        const amount = calculateDiscount(total, discountPercent);
+
+        result.innerText = `You saved ₹${amount.discountAmount}. Final Price is ₹${amount.totalAmount}.`;
+      }
+
+      const calculateBtn = document.getElementById("calculateBtn");
+
+      calculateBtn.addEventListener("click", handleButtonClick);
+    </script>
+  </body>
+</html>
