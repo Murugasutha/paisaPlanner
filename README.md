@@ -25,7 +25,7 @@ Each tool lives on its own page and is connected via a clean and minimal **navig
 
 ## 🚀 Live Demo
 
-🔗 [View the Live Project](https://github.com/Murugasutha/paisaPlanner)
+🔗 [View the Live Project](https://murugasutha.github.io/paisaPlanner/)
 
 ---
 
