@@ -35,9 +35,7 @@ This project was built as a learning milestone in **NeoG Camp**. It's a reminder
 
 ---
 
-## 📌 License
 
-This project is open-source and free to use under the [MIT License](LICENSE).
 
 
 
